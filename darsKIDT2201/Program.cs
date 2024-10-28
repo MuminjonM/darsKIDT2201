@@ -10,19 +10,29 @@ namespace darsKIDT2201
     {
         static void Main(string[] args)
         {
-            int a = 24, b = 25;
+            int a = 24, b = 36, c = 72, d = 100;
             //ekub topish
 
-            while(a!=b)
-            {
-                if (a > b) 
-                    a -= b;
-                else 
-                    b = b - a;
-            }
-            Console.WriteLine("ekub= " + a);
+            int ab = ekub(a, b);
+            int cd = ekub(c, d);
+            int natija= ekub(ab, cd); 
+            
+            Console.WriteLine("ekub= " + natija);
             Console.ReadKey();  
 
+        }
+
+        public static int ekub(int a,int b)
+        {
+
+            while (a != b)
+            {
+                if (a > b)
+                    a -= b;
+                else
+                    b = b - a;
+            }
+            return a;
         }
     }
 }
