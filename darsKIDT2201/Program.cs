@@ -10,14 +10,14 @@ namespace darsKIDT2201
     {
         static void Main(string[] args)
         {
-            int a = 24, b = 36, c = 72, d = 100;
+            int a = 24, b = 36;
             //ekub topish
 
-            int ab = ekub(a, b);
-            int cd = ekub(c, d);
-            int natija= ekub(ab, cd); 
             
-            Console.WriteLine("ekub= " + natija);
+            
+            Console.WriteLine("ekub= " + ekub(a,b));
+            Console.WriteLine("ekuk= " + ekuk(a, b));
+
             Console.ReadKey();  
 
         }
@@ -34,5 +34,12 @@ namespace darsKIDT2201
             }
             return a;
         }
+
+        public static int ekuk(int a,int b)
+        {
+            return a*b/ekub(a,b);
+
+        }
+
     }
 }
